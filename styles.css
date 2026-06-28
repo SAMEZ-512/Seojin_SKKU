@@ -1236,3 +1236,33 @@ h1 {
   font-weight: 1000;
   letter-spacing: 0.08em;
 }
+
+/* ===== Image preview thumbnail on hover ===== */
+.card-link.has-preview {
+  overflow: visible;
+}
+
+.card-link.has-preview::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: -132px;
+  z-index: 20;
+  width: 190px;
+  height: 118px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.08)),
+    var(--preview) center / cover no-repeat;
+  box-shadow: 0 22px 48px rgba(63, 48, 31, 0.24);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.96);
+  transition: 180ms ease;
+}
+
+.card-link.has-preview:hover::before {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
