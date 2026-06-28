@@ -1206,3 +1206,33 @@ h1 {
     linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
   color: white;
 }
+
+/* ===== Profile name under photo ===== */
+.profile-card .profile-orb {
+  margin-bottom: 16px;
+}
+
+.profile-caption {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.profile-caption strong {
+  display: block;
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: 1000;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.profile-caption span {
+  display: block;
+  margin-top: 6px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 1000;
+  letter-spacing: 0.08em;
+}
