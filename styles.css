@@ -1019,3 +1019,45 @@ h1 {
   border-color: var(--green);
   transform: translateY(-3px);
 }
+
+/* ===== Contact button final style ===== */
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(63, 48, 31, 0.08);
+  transition: 180ms ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.contact-pill svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.contact-pill:hover,
+.contact-pill.copied {
+  color: white;
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
