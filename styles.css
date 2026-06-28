@@ -139,7 +139,7 @@ summary {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  grid-template-columns: minmax(520px, 1.25fr) minmax(320px, 0.75fr);
   gap: 34px;
   align-items: center;
   min-height: calc(100vh - 72px);
