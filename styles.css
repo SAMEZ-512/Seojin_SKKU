@@ -808,7 +808,7 @@ h1 {
   transform: translateY(0);
 }
 
-@media (max-width: 980px) {
+@media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
   }
