@@ -139,11 +139,15 @@ summary {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(520px, 1.25fr) minmax(320px, 0.75fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
   gap: 34px;
   align-items: center;
   min-height: calc(100vh - 72px);
   padding-top: 64px;
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .eyebrow,
@@ -216,7 +220,6 @@ h1 {
 }
 
 .tag-row span,
-.contact-line a,
 .badge-card span,
 .status span {
   display: inline-flex;
@@ -231,14 +234,52 @@ h1 {
   font-weight: 800;
 }
 
-.contact-line a:hover {
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(63, 48, 31, 0.08);
+  transition: 180ms ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.contact-pill svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.contact-pill:hover,
+.contact-pill.copied {
   color: white;
   background: var(--green);
   border-color: var(--green);
+  transform: translateY(-3px);
 }
 
 .profile-card {
   position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 460px;
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 42px;
@@ -849,6 +890,11 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .profile-card {
+    justify-self: stretch;
+    max-width: 100%;
+  }
+
   .mini-grid,
   .badge-grid,
   .course-grid,
@@ -910,53 +956,8 @@ h1 {
   .disc-chart {
     min-height: 220px;
   }
-
-  .contact-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
 }
 
-.contact-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 46px;
-  padding: 0 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--green);
-  background: rgba(255, 255, 255, 0.92);
-  font-size: 15px;
-  font-weight: 900;
-  box-shadow: 0 10px 24px rgba(63, 48, 31, 0.08);
-  transition: 180ms ease;
-}
-
-.contact-pill svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-
-.contact-pill:hover {
-  color: white;
-  background: var(--green);
-  border-color: var(--green);
-  transform: translateY(-3px);
-}
-}
-
-/* ===== Hero desktop layout force fix ===== */
-@media (min-width: 761px) {
-  .hero {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr) !important;
-    gap: 34px !important;
-    align-items: center !important;
-  }
 
   .hero-copy {
     min-width: 0;
@@ -970,11 +971,6 @@ h1 {
   }
 }
 
-/* 진짜 모바일일 때만 아래로 내려가게 */
-@media (max-width: 760px) {
-  .hero {
-    grid-template-columns: 1fr !important;
-  }
 
   .profile-card {
     max-width: 100%;
@@ -982,13 +978,7 @@ h1 {
   }
 }
 
-/* ===== Contact button global fix ===== */
-.contact-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
-}
+
 
 .contact-line a.contact-pill {
   display: inline-flex;
@@ -1020,13 +1010,6 @@ h1 {
   transform: translateY(-3px);
 }
 
-/* ===== Contact button final style ===== */
-.contact-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
-}
 
 .contact-pill {
   display: inline-flex;
