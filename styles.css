@@ -1285,15 +1285,16 @@ h1 {
 .grade-summary-card {
   display: flex;
   align-items: center;
-  gap: 22px;
-  padding: 24px 28px;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 22px 26px;
   border-radius: 28px;
 }
 
 .grade-badge {
-  flex: 0 0 92px;
-  width: 92px;
-  height: 92px;
+  flex: 0 0 82px;
+  width: 82px;
+  height: 82px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -1305,7 +1306,7 @@ h1 {
 
 .grade-badge strong {
   display: block;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: -0.04em;
 }
