@@ -100,3 +100,27 @@ document.querySelectorAll(".story-node").forEach((node) => {
     storyCard.innerHTML = `<h3>${story.title}</h3><p>${story.text}</p>`;
   });
 });
+
+const copyEmailButton = document.getElementById("copy-email");
+
+if (copyEmailButton) {
+  copyEmailButton.addEventListener("click", async () => {
+    const email = copyEmailButton.dataset.email;
+    const label = copyEmailButton.querySelector("span");
+    const originalText = label ? label.textContent : "Email 복사";
+
+    try {
+      await navigator.clipboard.writeText(email);
+
+      if (label) label.textContent = "복사됨!";
+      copyEmailButton.classList.add("copied");
+
+      setTimeout(() => {
+        if (label) label.textContent = originalText;
+        copyEmailButton.classList.remove("copied");
+      }, 1600);
+    } catch (error) {
+      if (label) label.textContent = email;
+    }
+  });
+}
