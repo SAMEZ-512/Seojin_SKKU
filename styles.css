@@ -350,9 +350,12 @@ h1 {
 }
 
 .stat-grid span {
+  display: block;
+  margin-top: 5px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
+  line-height: 1.35;
 }
 
 .soft {
