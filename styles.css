@@ -141,15 +141,15 @@ summary {
 }
 
 .section {
-  width: min(1120px, calc(100% - 36px));
+  width: min(1280px, calc(100% - 36px));
   margin: 0 auto;
   padding: 92px 0;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
-  gap: 34px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.65fr);
+  gap: 42px;
   align-items: center;
   min-height: calc(100vh - 72px);
   padding-top: 64px;
@@ -181,10 +181,10 @@ p {
 
 h1 {
   margin-top: 14px;
-  max-width: 850px;
-  font-size: clamp(46px, 7vw, 86px);
-  line-height: 1.04;
-  letter-spacing: -0.08em;
+  max-width: 980px;
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 1.06;
+  letter-spacing: -0.075em;
 }
 
 .hero-text {
