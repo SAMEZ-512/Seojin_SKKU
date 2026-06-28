@@ -948,3 +948,36 @@ h1 {
   transform: translateY(-3px);
 }
 }
+
+/* ===== Hero desktop layout force fix ===== */
+@media (min-width: 761px) {
+  .hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr) !important;
+    gap: 34px !important;
+    align-items: center !important;
+  }
+
+  .hero-copy {
+    min-width: 0;
+  }
+
+  .profile-card {
+    align-self: center;
+    width: 100%;
+    max-width: 460px;
+    justify-self: end;
+  }
+}
+
+/* 진짜 모바일일 때만 아래로 내려가게 */
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-card {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}
