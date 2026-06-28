@@ -1266,3 +1266,194 @@ h1 {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
+/* ===== Course progress / grades ===== */
+.grade-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.grade-summary-card,
+.grade-table-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.grade-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px 28px;
+  border-radius: 28px;
+}
+
+.grade-badge {
+  flex: 0 0 92px;
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(135deg, var(--green), var(--green-2));
+  box-shadow: 0 14px 32px rgba(13, 107, 79, 0.22);
+  text-align: center;
+}
+
+.grade-badge strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.grade-badge span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.grade-summary-copy h3 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+
+.grade-summary-copy p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.grade-table-card {
+  margin-top: 22px;
+  padding: 26px;
+  border-radius: 30px;
+}
+
+.grade-subtable-card {
+  margin-top: 18px;
+}
+
+.grade-table-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.grade-table-head h3 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.05em;
+}
+
+.grade-table-head span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grade-table-scroll {
+  overflow-x: auto;
+}
+
+.grade-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.grade-table thead th {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  background: rgba(240, 234, 223, 0.72);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.grade-table tbody td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(226, 216, 199, 0.8);
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.grade-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.grade-total-row td {
+  font-weight: 900;
+  background: rgba(247, 244, 238, 0.72);
+}
+
+.grade-progress {
+  min-width: 190px;
+}
+
+.grade-progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: #dbeee6;
+  overflow: hidden;
+}
+
+.grade-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--green-2));
+}
+
+.grade-progress small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.grade-progress small.grade-complete {
+  color: var(--green);
+}
+
+@media (max-width: 900px) {
+  .grade-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-summary-card {
+    padding: 22px;
+  }
+
+  .grade-table-card {
+    padding: 20px;
+  }
+
+  .grade-table-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .grade-summary-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grade-badge {
+    width: 82px;
+    height: 82px;
+  }
+
+  .grade-badge strong {
+    font-size: 26px;
+  }
+}
