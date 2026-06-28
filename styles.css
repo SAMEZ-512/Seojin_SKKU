@@ -981,3 +981,41 @@ h1 {
     justify-self: stretch;
   }
 }
+
+/* ===== Contact button global fix ===== */
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.contact-line a.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(63, 48, 31, 0.08);
+  transition: 180ms ease;
+}
+
+.contact-pill svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.contact-line a.contact-pill:hover {
+  color: white;
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
