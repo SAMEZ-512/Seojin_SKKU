@@ -326,113 +326,144 @@
 </div>
 
   <div class="grade-table-card reveal">
-    <div class="grade-table-head">
-      <h3>이수구분별 학점 현황</h3>
-      <span>기준학점 · 취득학점 · 수강학점 · 반영 후 · 잔여학점 기준</span>
-    </div>
-
-    <div class="grade-table-scroll">
-      <table class="grade-table">
-        <thead>
-          <tr>
-            <th>구분</th>
-            <th>기준학점</th>
-            <th>취득학점</th>
-            <th>수강학점</th>
-            <th>반영 후</th>
-            <th>잔여학점</th>
-            <th>상태</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>교양 총학점</td>
-            <td>48</td>
-            <td>46</td>
-            <td>3</td>
-            <td>49</td>
-            <td>0</td>
-            <td>
-              <div class="grade-progress">
-                <div class="grade-progress-track">
-                  <span class="grade-progress-fill" style="width:96%;"></span>
-                </div>
-                <small>96% · 2학점 잔여</small>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>제1전공 총학점</td>
-            <td>42</td>
-            <td>35</td>
-            <td>9</td>
-            <td>44</td>
-            <td>0</td>
-            <td>
-              <div class="grade-progress">
-                <div class="grade-progress-track">
-                  <span class="grade-progress-fill" style="width:100%;"></span>
-                </div>
-                <small class="grade-complete">수강 반영 시 완료</small>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>제2전공 총학점</td>
-            <td>42</td>
-            <td>42</td>
-            <td>4</td>
-            <td>46</td>
-            <td>0</td>
-            <td>
-              <div class="grade-progress">
-                <div class="grade-progress-track">
-                  <span class="grade-progress-fill" style="width:100%;"></span>
-                </div>
-                <small class="grade-complete">수강 반영 시 완료</small>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>DS 총학점</td>
-            <td>4</td>
-            <td>9</td>
-            <td>0</td>
-            <td>9</td>
-            <td>0</td>
-            <td>
-              <div class="grade-progress">
-                <div class="grade-progress-track">
-                  <span class="grade-progress-fill" style="width:100%;"></span>
-                </div>
-                <small class="grade-complete">이수 초과 · 완료</small>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="grade-total-row">
-            <td>총 학점</td>
-            <td>136</td>
-            <td>148</td>
-            <td>7</td>
-            <td>155</td>
-            <td>0</td>
-            <td>
-              <div class="grade-progress">
-                <div class="grade-progress-track">
-                  <span class="grade-progress-fill" style="width:100%;"></span>
-                </div>
-                <small class="grade-complete">수강 반영 시 졸업요건 충족</small>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="grade-table-head">
+    <h3>이수구분별 학점 현황</h3>
+    <span>기준학점 · 취득학점 · 현재 수강학점 · 이수 후 학점 · 잔여학점</span>
   </div>
+
+  <div class="grade-table-scroll">
+    <table class="grade-table">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>기준학점</th>
+          <th>취득학점</th>
+          <th>수강학점</th>
+          <th>이수 후</th>
+          <th>잔여학점</th>
+          <th>상태</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- 교양 -->
+        <tr>
+          <td>교양 총학점</td>
+          <td>48</td>
+          <td>46</td>
+          <td>3</td>
+          <td>49</td>
+          <td>0</td>
+          <td>
+            <div class="grade-progress">
+              <div class="grade-progress-track">
+                <span
+                  class="grade-progress-fill"
+                  style="width: 100%;"
+                ></span>
+              </div>
+              <small class="grade-complete">
+                현재 학기 이수 후 요건 충족
+              </small>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 제1전공 -->
+        <tr>
+          <td>제1전공 총학점</td>
+          <td>42</td>
+          <td>44</td>
+          <td>0</td>
+          <td>44</td>
+          <td>0</td>
+          <td>
+            <div class="grade-progress">
+              <div class="grade-progress-track">
+                <span
+                  class="grade-progress-fill"
+                  style="width: 100%;"
+                ></span>
+              </div>
+              <small class="grade-complete">
+                요건 충족
+              </small>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 제2전공 -->
+        <tr>
+          <td>제2전공 총학점</td>
+          <td>42</td>
+          <td>42</td>
+          <td>4</td>
+          <td>46</td>
+          <td>0</td>
+          <td>
+            <div class="grade-progress">
+              <div class="grade-progress-track">
+                <span
+                  class="grade-progress-fill"
+                  style="width: 100%;"
+                ></span>
+              </div>
+              <small class="grade-complete">
+                요건 충족 · 4학점 추가 이수 중
+              </small>
+            </div>
+          </td>
+        </tr>
+
+        <!-- DS -->
+        <tr>
+          <td>DS 총학점</td>
+          <td>4</td>
+          <td>9</td>
+          <td>0</td>
+          <td>9</td>
+          <td>0</td>
+          <td>
+            <div class="grade-progress">
+              <div class="grade-progress-track">
+                <span
+                  class="grade-progress-fill"
+                  style="width: 100%;"
+                ></span>
+              </div>
+              <small class="grade-complete">
+                이수 초과 · 완료
+              </small>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 총 학점 -->
+        <tr class="grade-total-row">
+          <td>총 학점</td>
+          <td>136</td>
+          <td>148</td>
+          <td>7</td>
+          <td>155</td>
+          <td>0</td>
+          <td>
+            <div class="grade-progress">
+              <div class="grade-progress-track">
+                <span
+                  class="grade-progress-fill"
+                  style="width: 100%;"
+                ></span>
+              </div>
+              <small class="grade-complete">
+                현재 학기 이수 후 졸업학점 요건 충족
+              </small>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
   <div class="grade-table-card reveal grade-subtable-card">
     <div class="grade-table-head">
